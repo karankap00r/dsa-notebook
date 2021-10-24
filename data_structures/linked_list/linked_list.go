@@ -11,6 +11,11 @@ type LinkedList struct {
 	Head *LLNode
 }
 
+//Print will print out the linked list content
+func (list LinkedList) Print() {
+	print(list.Head)
+}
+
 func print(head *LLNode) {
 	if head == nil {
 		return
@@ -20,10 +25,11 @@ func print(head *LLNode) {
 	}
 }
 
-func insert(head, node *LLNode) *LLNode {
+func insertAtStart(head, node *LLNode) *LLNode {
 	if head == nil {
 		return &LLNode{node.Data, nil}
 	}
 
-	return nil
+	node.Next = head
+	return node
 }

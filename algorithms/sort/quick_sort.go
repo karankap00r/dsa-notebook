@@ -15,6 +15,6 @@ package sort
 */
 type QuickSort struct{}
 
-func (qs QuickSort) Sort(arr []int) {
+func (QuickSort) Sort(arr []int) {
 
 }
